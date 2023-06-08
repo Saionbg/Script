@@ -1,13 +1,3 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
- 
-OrionLib:MakeNotification({
-    Name = "Loaded!",
-    Content = "The script has loaded!",
-    Image = "rbxassetid://4483345998",
-    Time = 3
-})
-OrionLib:Init()
-
 -- Gui to Lua
 -- Version: 3.2
 
