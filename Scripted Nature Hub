@@ -1,0 +1,119 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+Frame.BackgroundTransparency = 0.500
+Frame.Position = UDim2.new(0.858712733, 0, 0.0237762257, 0)
+Frame.Size = UDim2.new(0.129513338, 0, 0.227972031, 0)
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Size = UDim2.new(1, 0, 1, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Toggle"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 50.000
+TextButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextStrokeTransparency = 0.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" , false , game)
+end)
+
+UITextSizeConstraint.Parent = TextButton
+UITextSizeConstraint.MaxTextSize = 50
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("NATURE HUB V1.5", "GrapeTheme") 
+
+local Tab = Window:NewTab("BedWars")
+local Section = Tab:NewSection("BedWars")
+
+Section:NewKeybind("Toggle ui", "Toggle the ui yes", Enum.KeyCode.F6, function()
+    Library:ToggleUI()
+end)
+
+Section:NewButton("Vape V4 ( Connected With Nature Hub) ", "F TO FLY R TO LONGJUMP", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+end)
+
+Section:NewButton("Infinite Yield", "Admin Script", function()
+    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Yield.txt"))()
+end)
+
+Section:NewButton("ANIMATIONS", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
+end)
+
+Section:NewButton("Auto-Toxic", "be a bad guy", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/iLSVsnjZ", true))()
+end)
+
+Section:NewButton("Future ( CONNECTED WITH NATURE V6 ) ", "EEEE", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/joeengo/Future/main/loadstring.lua', true))()
+end)
+
+Section:NewSlider("Speed", "change speed max 35", 35, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+end)
+
+Section:NewButton("HITBOX", "BEE", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
+end)
+
+local Tab = Window:NewTab("Doors")
+local Section = Tab:NewSection("Doors")
+
+Section:NewButton("POOPDOORS", "Anticheat ON FIRE", function()
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/poopdoors_edited/main/poopdoors_edited.lua"),true))() 
+end)
+
+Section:NewButton("MSDOORS", "BEE", function()
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/MSDOORS/main/MSHUB_Loader.lua"),true))()
+end)
+
+Section:NewButton("paintball gun", "BEE", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/iimateiYT/Scripts/main/Paintball%20Gun.lua"))()
+end)
+
+Section:NewButton("BlackHole", "BEE", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/iimateiYT/Scripts/main/Black%20Hole.lua"))()
+end)
+ 
+Section:NewButton("anticheat bypass", "BEE", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/iimateiYT/Scripts/main/Protected%20(30).lua", true))()
+end)
+
+local Tab = Window:NewTab("Tower Of Hell")
+local Section = Tab:NewSection("Hell Nah")
+
+Section:NewButton("Instant Win", "BEE", function()
+    loadstring(game:HttpGet("https://scriptblox.com/raw/Tower-of-Hell-instant-win-GUI-11009"))()
+end)
+
+Section:NewButton("Get Detected (Fun)", "BEE", function()
+    game.Players.LocalPlayer.Kick"You Got Detected By Owner Ban Appeal at discord.gg/TOWERSHACKEDFUN"
+end)
+
+Section:NewButton("Infinite YIELD", "MONKEY NOT BYPASSED", function()
+    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Yield.txt"))() 
+end)   
+
+Section:NewButton("Anticheat got you", "BOI", function()
+    game.Players.LocalPlayer.Ban"Shut Up Monke"
+end)
